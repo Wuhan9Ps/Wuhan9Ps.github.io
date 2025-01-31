@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武汉九分教育咨询有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        /* 移除所有动画相关的样式 */
+        .value-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* 团队成员图片容器 */
+        .team-member-image-container {
+            width: 200px;  /* 固定容器宽度 */
+            height: 320px; /* 固定容器高度 */
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* 防止图片溢出容器 */
+        }
+
+        /* 团队成员图片样式 */
+        .team-member-image {
+            width: 100%;    /* 填充容器宽度 */
+            height: 100%;   /* 填充容器高度 */
+            object-fit: cover; /* 覆盖整个容器，保持纵横比，必要时裁剪 */
+            transition: transform 0.3s ease;
+        }
+
+        .team-member-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* 二维码容器和图片样式 */
+        .qr-code-container {
+            width: 120px;  /* 固定容器宽度 */
+            height: 120px; /* 固定容器高度 */
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-code-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-[#3F7480]">九分教育</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-[#3F7480]">首页</a>
+                    <a href="#team" class="hover:text-[#3F7480]">团队介绍</a>
+                    <a href="#services" class="hover:text-[#3F7480]">服务内容</a>
+                    <a href="#features" class="hover:text-[#3F7480]">公司特色</a>
+                    <a href="#cases" class="hover:text-[#3F7480]">成功案例</a>
+                    <a href="#values" class="hover:text-[#3F7480]">核心价值</a>
+                    <a href="#contact" class="hover:text-[#3F7480]">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero部分 -->
+    <section id="home" class="pt-24 pb-12 bg-gradient-to-b from-[#2A4F57] via-[#3F7480] to-[#5E9BA9]">
+        <div class="container mx-auto px-6 py-20 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">武汉九分教育咨询有限公司</h1>
+            <p class="text-xl md:text-2xl mb-8">专业的留学规划与申请咨询服务</p>
+            <p class="text-lg max-w-3xl mx-auto">
+                源自九分教育总公司，拥有QS100大学和国内985、211、双一流高校博士组成的精英团队，
+                致力于为全国的学子提供全方位的留学规划、申请辅导与学术支持。
+            </p>
+        </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section id="team" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">核心团队</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 团队成员卡片 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="team-member-image-container">
+                        <img src="./person1.png" alt="Thomas" class="team-member-image">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Thomas</h3>
+                    <p class="text-gray-600 text-center">校长</p>
+                    <ul class="mt-4 space-y-2">
+                        <li>九分教育创始人</li>
+                        <li>英国华威大学管理学硕士</li>
+                        <li>雅思总分8分，写作7.5分</li>
+                        <li>从业10年，教授学生1000余名</li>
+                    </ul>
+                </div>
+                <!-- 其他5位成员卡片使用相同结构 -->
+                <!-- Quinn卡片 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="team-member-image-container">
+                        <img src="./person2.png" alt="Quinn" class="team-member-image">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Quinn</h3>
+                    <p class="text-gray-600 text-center">资深留学顾问</p>
+                    <ul class="mt-4 space-y-2">
+                        <li>英国杜伦大学经济学博士</li>
+                        <li>擅长英国、加拿大、香港等留学申请</li>
+                        <li>十年留学教学经历</li>
+                        <li>发表SSCI、SCI论文近10篇</li>
+                    </ul>
+                </div>
+                <!-- Chason卡片 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="team-member-image-container">
+                        <img src="./person3.png" alt="Chason" class="team-member-image">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Chason</h3>
+                    <p class="text-gray-600 text-center">资深留学顾问</p>
+                    <ul class="mt-4 space-y-2">
+                        <li>美国马里兰大学博士、澳洲国立大学博士后</li>
+                        <li>擅长美国、新加坡、澳洲、新西兰等留学申请</li>
+                        <li>十年海外学习、教学和科研经历</li>
+                        <li>发表SCI论文10余篇</li>
+                    </ul>
+                </div>
+                <!-- Eartha卡片 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="team-member-image-container">
+                        <img src="./person4.png" alt="Eartha" class="team-member-image">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Eartha</h3>
+                    <p class="text-gray-600 text-center">资深留学顾问</p>
+                    <ul class="mt-4 space-y-2">
+                        <li>武汉大学经济学博士</li>
+                        <li>擅长德国、法国等留学申请</li>
+                        <li>发表SSCI、SCI论文10余篇</li>
+                        <li>ESI高被引学者、知网高被引学者Top5%</li>
+                    </ul>
+                </div>
+                <!-- Flynn卡片 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="team-member-image-container">
+                        <img src="./person5.png" alt="Flynn" class="team-member-image">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Flynn</h3>
+                    <p class="text-gray-600 text-center">资深留学顾问</p>
+                    <ul class="mt-4 space-y-2">
+                        <li>华中科技大学土木工程博士</li>
+                        <li>擅长美国、加拿大、德国等留学申请</li>
+                        <li>发表SCI论文10余篇</li>
+                        <li>ESI高被引学者</li>
+                    </ul>
+                </div>
+                <!-- Andrew卡片 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="team-member-image-container">
+                        <img src="./person1.png" alt="Andrew" class="team-member-image">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Andrew</h3>
+                    <p class="text-gray-600 text-center">资深留学顾问</p>
+                    <ul class="mt-4 space-y-2">
+                        <li>中南财经政法大学经济学博士</li>
+                        <li>擅长欧洲、英国、美国等留学申请</li>
+                        <li>曾就职于国内顶级投资银行，管理规模超200亿元</li>
+                        <li>发表高水平学术论文近10篇</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务内容 -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">服务内容</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">留学规划</h3>
+                    <ul class="space-y-2">
+                        <li>国家选择</li>
+                        <li>学校及专业选择</li>
+                        <li>考试规划</li>
+                        <li>背景提升</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">学校申请</h3>
+                    <ul class="space-y-2">
+                        <li>文书制作</li>
+                        <li>申请指导</li>
+                        <li>面试辅导</li>
+                        <li>奖学金申请</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">签证申请</h3>
+                    <ul class="space-y-2">
+                        <li>签证方案制定</li>
+                        <li>材料准备指导</li>
+                        <li>签证培训</li>
+                        <li>签证面试模拟</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-4">其他服务</h3>
+                    <ul class="space-y-2">
+                        <li>行前准备</li>
+                        <li>接机住宿</li>
+                        <li>入学适应支持</li>
+                        <li>生活指导服务</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司特色 -->
+    <section id="features" class="py-20 bg-[#3F7480]/10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">公司特色</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">多元化博士团队</h3>
+                    <p>覆盖多个学科领域的专业指导</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">全方位学术支持</h3>
+                    <p>帮助适应海外学习环境</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">专属一站式服务</h3>
+                    <p>专属服务老师全程陪伴</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">专业品质定价</h3>
+                    <p>坚守高品质服务标准</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section id="cases" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">成功案例</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow">
+                    <thead>
+                        <tr class="bg-[#3F7480] text-white">
+                            <th class="py-3 px-6 text-left">院校类型</th>
+                            <th class="py-3 px-6 text-left">代表院校</th>
+                            <th class="py-3 px-6 text-left">成功案例数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-4 px-6">985院校</td>
+                            <td class="py-4 px-6">北大、上交、复旦等</td>
+                            <td class="py-4 px-6">100+</td>
+                        </tr>
+                        <!-- 其他案例行... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心价值 -->
+    <section id="values" class="py-20 bg-gradient-to-r from-[#3F7480] to-[#2A4F57] text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">9P核心价值</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Personalization</h3>
+                    <p>个性化服务</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Passion</h3>
+                    <p>热情服务</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Professionalism</h3>
+                    <p>专业服务</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Potential</h3>
+                    <p>挖掘潜力</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Promise</h3>
+                    <p>信守承诺</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Positivity</h3>
+                    <p>积极态度</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Perseverance</h3>
+                    <p>坚持不懈</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Planning</h3>
+                    <p>科学规划</p>
+                </div>
+                <div class="value-card text-center">
+                    <h3 class="text-xl font-bold mb-2">Progress</h3>
+                    <p>持续进步</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- 左侧二维码 -->
+                <div class="text-center">
+                    <div class="qr-code-container">
+                        <img src="images/QR1.png" alt="微信二维码1" class="qr-code-image">
+                    </div>
+                    <p class="mt-4">咨询电话1：15527665899（微信同号）</p>
+                </div>
+
+                <!-- 右侧二维码 -->
+                <div class="text-center">
+                    <div class="qr-code-container">
+                        <img src="images/QR2.png" alt="微信二维码2" class="qr-code-image">
+                    </div>
+                    <p class="mt-4">咨询电话2：15527869899（微信同号）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 武汉九分教育咨询有限公司. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
